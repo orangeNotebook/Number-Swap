@@ -1,6 +1,6 @@
 # Number Swap
 
-A program that gives you a list of 15 numbers and lets you swap the numbers with eachother
+A program that gives you a list of 15 numbers and lets you swap the numbers with each other
 
 ### npm install
 
