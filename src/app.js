@@ -3,10 +3,10 @@ const readline = require("readline");
 let rl = readline.createInterface(process.stdin, process.stdout);
 
 function inputHandler(before, answer, list) {
-  var firstIndex = list.indexOf(Number(before));
-  var secondIndex = list.indexOf(Number(answer));
-  list[firstIndex] = Number(answer);
-  list[secondIndex] = Number(before);
+  var firstIndex = list[Number(before) - 1];
+  var secondIndex = list[Number(answer) - 1];
+  list[Number(before) - 1] = secondIndex;
+  list[Number(answer) - 1] = firstIndex;
   getInput(list);
 }
 
