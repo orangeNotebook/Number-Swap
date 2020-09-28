@@ -3,10 +3,10 @@ const readline = require("readline");
 let rl = readline.createInterface(process.stdin, process.stdout);
 
 function inputHandler(n1, n2, list) {
-  var firstIndex = list[n1 - 1];
-  var secondIndex = list[n2 - 1];
-  list[n1 - 1] = secondIndex;
-  list[n2 - 1] = firstIndex;
+  var firstIndex = list[n1];
+  var secondIndex = list[n2];
+  list[n1] = secondIndex;
+  list[n2] = firstIndex;
   getInput(list);
 }
 
@@ -24,7 +24,7 @@ function getInput(list) {
           console.log(`${swap2} does not exist in the list`);
           getInput(list);
         } else {
-          inputHandler(Number(swap1), Number(swap2), list);
+          inputHandler(Number(swap1) - 1, Number(swap2) - 1, list);
         }
       });
     }
